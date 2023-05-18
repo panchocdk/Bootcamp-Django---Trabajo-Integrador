@@ -1,0 +1,29 @@
+{% extends 'index.jinja' %}
+
+{% block content %}
+
+    <div class="container">
+
+        <h3>Crear un proveedor</h3>
+
+        <form action="" method="post">
+
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
+            {{ form.as_p() }}
+
+            <br>
+            <br>
+
+            <button type="submit" class="button">Crear proveedor</button>
+
+
+        </form>
+
+        <br>
+
+        <a href="{{ '/lista_proveedores' }}">Cancelar</a>
+
+    </div>
+
+{% endblock %}

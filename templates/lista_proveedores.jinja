@@ -1,0 +1,43 @@
+{% extends 'index.jinja'%}
+
+{% block content %}
+
+    <div class='container'>
+    
+        <h3>Lista de proveedores</h3>
+
+        <div class="form-group mb-2 col col-lg-6">
+        
+            <table class="center">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>DNI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for proveedor in proveedores %}
+                    <tr>
+                        <td>{{ proveedor.id }}</td>
+                        <td>{{ proveedor.nombre }}</td>
+                        <td>{{ proveedor.apellido }}</td>
+                        <td>{{ proveedor.dni }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <a href="{{ '/crear_proveedor' }}" class="button">Crear un proveedor</a>
+
+            <br>
+            <br>
+
+            <a href="{{ '/home' }}" class="button">Inicio</a>
+
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos y Proveedores</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-reboot.css">
+    <style>
+        h1 {
+        text-align:center;
+        }
+        h3 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+        }
+        .center {
+            margin-left:auto;
+            margin-right:auto;
+        }
+        table, td, th {
+            border: 1px solid black;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration:none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 4px;
+            border: 2px solid #007bff;
+        }
+        .button:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center">Control de Stock</h1>
+
+    {% block content %}
+
+    <div class='container'>
+
+        <h3>Bienvenidos</h3>
+        <br>
+        <br>
+        <a href="{{ '/lista_productos' }}" class="button">Lista de productos</a>
+
+        <br>
+        <br>
+        <a href="{{ '/lista_proveedores' }}" class="button">Lista de proveedores</a>
+
+    </div>
+
+    {% endblock %}
+</body>
+</html>
